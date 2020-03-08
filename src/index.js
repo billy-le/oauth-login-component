@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import MirageServer from './mirageServer';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+MirageServer();
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
