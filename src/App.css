@@ -1,73 +1,123 @@
 :root {
-	--primary-color: #1b262c;
-	--secondary-color: #ed6663;
-	--tertiary-color: #ffa372;
-	--login-form-width: 300px;
+  --primary-color: #1b262c;
+  --secondary-color: #ed6663;
+  --tertiary-color: #ffa372;
+  --login-form-width: 300px;
 }
 
 body {
-	color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 #login-form {
-	max-width: var(--login-form-width);
-	margin: 5rem auto;
-	box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2), 0 0px 20px rgba(0, 0, 0, 0.4);
-	border-radius: 4px;
-	padding: 2rem;
+  max-width: var(--login-form-width);
+  margin: 5rem auto;
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2), 0 0px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  padding: 2rem;
 }
 
 .tabs {
-	display: flex;
+  display: flex;
 }
 
 .tabs .overtop {
-	transition: width 0.5s ease;
-	background-color: var(--secondary-color);
-	height: 2px;
+  transition: width 0.5s ease;
+  background-color: var(--secondary-color);
+  height: 2px;
 }
 
 .tabs h2:not(:last-child) {
-	margin-right: 1rem;
+  margin-right: 1rem;
 }
 
 .tabs h2 {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 h2 {
-	margin: 0 0 1rem;
+  margin: 0 0 1rem;
 }
 
 form {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .control {
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
 }
 
 input {
-	margin-bottom: 0.25rem;
-	border-radius: 4px;
-	border: 1px solid lightgray;
-	padding: 0.25rem 0.5rem;
-	margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+  padding: 0.25rem 0.5rem;
+  margin-top: 0.25rem;
 }
 
 .error {
-	color: var(--secondary-color);
-	font-size: 0.75rem;
+  color: var(--secondary-color);
+  font-size: 0.75rem;
+}
+
+.forgot-password {
+  color: var(--primary-color);
+  opacity: 0.8;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.forgot-password:hover {
+  color: var(--secondary-color);
 }
 
 button[type='submit'] {
-	width: calc(var(--login-form-width) / 4);
-	border-radius: 4px;
-	background-color: var(--tertiary-color);
-	border: none;
-	padding: 0.25rem 0.5rem;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: calc(var(--login-form-width) / 4);
+  border-radius: 4px;
+  background-color: var(--tertiary-color);
+  border: none;
+  padding: 0.25rem 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.separator::before,
+.separator::after {
+  background-color: var(--secondary-color);
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+}
+
+.separator::before {
+  margin-right: 1rem;
+}
+
+.separator::after {
+  margin-left: 1rem;
+}
+
+.oauth-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.oauth-list li {
+  display: flex;
+  justify-content: center;
+}
+
+.oauth-list li:not(:last-child) {
+  margin-bottom: 1rem;
 }
